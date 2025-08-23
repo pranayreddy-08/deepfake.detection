@@ -1,17 +1,10 @@
-# Deepfake Video Detection
-├─ api/ # FastAPI service (inference API)
-│ └─ main.py
-├─ app/ # Streamlit demo UI
-│ └─ app.py
-├─ src/ # Library code (preprocess, train, infer)
-│ ├─ data/
-│ ├─ models/
-│ ├─ config.py
-│ └─ init.py
-├─ data/ # Local data (kept out of git except .gitkeep)
-│ ├─ raw/
-│ ├─ frames/
-│ └─ faces/
-├─ saved_models/ # Trained weights (ignored from git)
-├─ requirements.txt
-└─ README.md
+# Deepfake Video Detection (Image + Video)
+
+> **Status:** MVP ✅ — trainable model + Streamlit UIs + FastAPI API  
+> **Backbone:** Xception (ImageNet) • **TF** 2.15 • **OS:** Windows-friendly (Git Bash / VS Code)
+
+This repo detects deepfakes from **face images** and **videos**.  
+You can:
+- Train on a small face dataset (e.g., CIPLab real/fake faces).
+- Evaluate on a validation split (AUC, confusion, best threshold).
+- Run a **Streamlit UI** (image & video) and a **FastAPI** inference API.
